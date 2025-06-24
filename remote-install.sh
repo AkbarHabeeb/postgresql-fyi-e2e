@@ -40,7 +40,9 @@ echo -e "${YELLOW}📦 Extracting package...${NC}"
 
 # Extract
 tar -xzf postgresql-fyi.tar.gz
-cd postgresql-fyi-main
+EXTRACTED_DIR=$(tar -tzf postgresql-fyi.tar.gz | head -1 | cut -f1 -d"/")
+cd "$EXTRACTED_DIR"
+echo -e "${YELLOW}📁 Working in directory: $EXTRACTED_DIR${NC}"
 
 # Make scripts executable
 chmod +x scripts/*.sh
