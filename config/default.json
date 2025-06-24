@@ -1,0 +1,27 @@
+{
+  "port": 1234,
+  "host": "localhost",
+  "corsOrigins": [
+    "*"
+  ],
+  "maxConnections": 10,
+  "connectionTimeout": 30000,
+  "connectionMaxAge": 1800000,
+  "cleanupInterval": 300000,
+  "logLevel": "info",
+  "logFile": "/var/log/postgresql-fyi/service.log",
+  "security": {
+    "enableSQLInjectionProtection": true,
+    "maxQueryLength": 10000,
+    "rateLimitWindowMs": 900000,
+    "rateLimitMax": 100
+  },
+  "ssl": {
+    "autoDetect": true,
+    "rejectUnauthorized": false
+  },
+  "monitoring": {
+    "enableHealthCheck": true,
+    "enableMetrics": false
+  }
+}
