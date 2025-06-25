@@ -12,14 +12,14 @@
   },
   "keywords": [
     "postgresql",
-    "postgres",
+    "postgres", 
     "systemd",
     "service",
     "web",
     "bridge",
     "api"
   ],
-  "author": "Your Name",
+  "author": "Akbar Habeeb B",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
@@ -30,11 +30,11 @@
     "dotenv": "^16.3.1"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=10.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/postgresql-fyi.git"
+    "url": "https://github.com/AkbarHabeeb/postgresql-fyi-e2e.git"
   },
   "files": [
     "server.js",

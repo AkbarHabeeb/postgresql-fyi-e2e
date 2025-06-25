@@ -228,11 +228,11 @@ class PostgreSQLFYIService {
           data: {
             rows: result.rows,
             rowCount: result.rowCount,
-            fields: result.fields?.map(field => ({
+            fields: result.fields ? result.fields.map(field => ({
               name: field.name,
               dataTypeID: field.dataTypeID,
               dataTypeSize: field.dataTypeSize
-            })),
+            })) : [],
             duration
           }
         });
@@ -497,7 +497,7 @@ function loadConfiguration() {
     corsOrigins: ['*'],
     maxConnections: 5,
     connectionTimeout: 30000,
-    connectionMaxAge: 120 * 60 * 1000, // 120 minutes
+    connectionMaxAge: 120 * 60 * 1000, // 30 minutes
     cleanupInterval: 5 * 60 * 1000, // 5 minutes
     logLevel: 'info',
     logFile: process.env.NODE_ENV === 'development' ?

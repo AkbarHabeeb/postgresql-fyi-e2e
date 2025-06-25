@@ -38,8 +38,8 @@ if ! command -v node &> /dev/null; then
 fi
 
 # Check Node.js version
-REQUIRED_VERSION="16.0.0"
 NODE_VERSION=$(node -v | sed 's/v//')
+REQUIRED_VERSION="10.0.0"
 
 # Compare using sort -V (version sort)
 if ! printf "%s\n%s" "$REQUIRED_VERSION" "$NODE_VERSION" | sort -VC; then
