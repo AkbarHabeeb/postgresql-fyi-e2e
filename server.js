@@ -120,16 +120,16 @@ class PostgreSQLFYIService {
     // Connect to database
     this.app.post('/connect', async (req, res) => {
       try {
-        const { host, port, database, username, password, sslMode } = req.body;
+        const { host, port, database, username, password, sslMode, id } = req.body;
 
-        if (!host || !database || !username || !password) {
+        if (!host || !database || !username || !password || !id) {
           return res.status(400).json({
             success: false,
             error: 'Missing required connection parameters: host, database, username, password'
           });
         }
 
-        const connectionId = this.generateConnectionId();
+        const connectionId = id;
 
         // Determine SSL configuration
         let sslConfig = this.determineSSLConfig(host, sslMode);
