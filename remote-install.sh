@@ -29,7 +29,7 @@ echo -e "${YELLOW}📥 Downloading PostgreSQL FYI Service from GitHub...${NC}"
 TEMP_DIR=$(mktemp -d)
 cd $TEMP_DIR
 
-GITHUB_URL="https://github.com/AkbarHabeeb/postgresql-fyi/archive/refs/heads/main.tar.gz"
+GITHUB_URL="https://github.com/AkbarHabeeb/postgresql-fyi-e2e/archive/refs/heads/main.tar.gz"
 if ! curl -L -o postgresql-fyi.tar.gz "$GITHUB_URL"; then
     echo -e "${RED}❌ Failed to download package. Check your internet connection.${NC}"
     exit 1
