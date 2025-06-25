@@ -38,10 +38,11 @@ if ! command -v node &> /dev/null; then
 fi
 
 # Check Node.js version
-NODE_VERSION=$(node --version | sed 's/v//')
 REQUIRED_VERSION="16.0.0"
+NODE_VERSION=$(node -v | sed 's/v//')
 
-if ! node -e "process.exit(require('semver').gte('$NODE_VERSION', '$REQUIRED_VERSION') ? 0 : 1)" 2>/dev/null; then
+# Compare using sort -V (version sort)
+if ! printf "%s\n%s" "$REQUIRED_VERSION" "$NODE_VERSION" | sort -VC; then
     echo -e "${RED}❌ Node.js version $NODE_VERSION is too old. Please install version $REQUIRED_VERSION or later.${NC}"
     exit 1
 fi
