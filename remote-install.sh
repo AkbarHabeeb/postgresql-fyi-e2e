@@ -78,10 +78,6 @@ tar -xzf app.tar.gz
 EXTRACTED_DIR=$(find . -maxdepth 1 -type d -name "postgresql-fyi-e2e-*")
 cd "$EXTRACTED_DIR"
 
-# Extract
-tar -xzf postgresql-fyi.tar.gz
-EXTRACTED_DIR=$(tar -tzf postgresql-fyi.tar.gz | head -1 | cut -f1 -d"/")
-cd "$EXTRACTED_DIR"
 echo -e "${YELLOW}📁 Working in directory: $EXTRACTED_DIR${NC}"
 
 chmod +x scripts/*.sh
