@@ -91,7 +91,7 @@ if [ "$START_SERVICE" = true ]; then
     sudo systemctl start postgresql-fyi
     sleep 2
 
-    if curl -s http://localhost:1234/health >/dev/null; then
+    if curl -s http://localhost:6240/health >/dev/null; then
         echo -e "${GREEN}✅ Service is up and running!${NC}"
     else
         echo -e "${YELLOW}⚠️  Service installed but not reachable on /health.${NC}"

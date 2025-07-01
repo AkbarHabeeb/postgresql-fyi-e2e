@@ -17,7 +17,7 @@ StartLimitBurst=3
 
 # Environment
 Environment=NODE_ENV=production
-Environment=PORT=1234
+Environment=PORT=6240
 Environment=HOST=localhost
 Environment=CORS_ORIGINS=*
 Environment=LOG_LEVEL=info

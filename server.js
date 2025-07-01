@@ -492,7 +492,7 @@ function loadConfiguration() {
 
   // Default config (lowest priority)
   const defaultConfig = {
-    port: 1234,
+    port: 6240,
     host: 'localhost',
     corsOrigins: ['*'],
     maxConnections: 5,

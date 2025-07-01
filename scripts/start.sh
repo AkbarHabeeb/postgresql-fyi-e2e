@@ -10,7 +10,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 # Default values
-PORT=1234
+PORT=6240
 HOST=localhost
 CORS_ORIGINS="*"
 LOG_LEVEL=info
@@ -46,7 +46,7 @@ while [[ $# -gt 0 ]]; do
             echo "Usage: $0 [options]"
             echo ""
             echo "Options:"
-            echo "  -p, --port PORT         Port to run on (default: 1234)"
+            echo "  -p, --port PORT         Port to run on (default: 6240)"
             echo "  -h, --host HOST         Host to bind to (default: localhost)"
             echo "      --cors-origins      CORS origins (default: *)"
             echo "      --log-level LEVEL   Log level (default: info)"
